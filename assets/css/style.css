@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange:  hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --Very-dark-blue: hsl(234, 12%, 34%);
+    --Grayish-blue: hsl(229, 6%, 66%);
+    --light-gray: hsl(0, 0%, 98%);
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    background-color: var(--light-gray);
+}
+
+.cards {
+    height: 100vh;
+
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+
+}
+
+.content {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading h1 {
+    font-size: 32px;
+    font-weight: 200;
+    color: var(--Very-dark-blue);
+
+}
+
+.heading h2 {
+    font-size: 32px;
+    color: var(--Very-dark-blue);
+    font-weight: 600;
+}
+
+.heading p {
+    margin-top: 20px;
+    color: var(--Grayish-blue);
+    max-width: 500px;
+    line-height: 1.8;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 4rem;
+    column-gap: 30px;
+    align-items: center;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+    height: 240px;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--Very-dark-blue);
+}
+
+.card p {
+    font-size: 14px;
+    color: var(--Grayish-blue);
+}
+
+.card img {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+.col-1 {
+    border-top: 4px solid var(--Cyan);
+}
+
+.card-1 {
+    margin-bottom: 30px;
+    border-top: 4px solid var(--red);
+}
+
+.card-2 {
+    border-top: 4px solid var(--Orange);
+}
+
+.col-3 {
+    border-top: 4px solid var(--Blue);
+}
+
+@media (max-width: 700px) {
+
+    .container {
+        padding: 2rem;
+    }
+
+    .heading h1, .heading h2 {
+        font-size: 25px;
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .card-1 {
+        margin-bottom: 20px;
+    }
+}
